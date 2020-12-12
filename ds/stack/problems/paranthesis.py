@@ -25,9 +25,9 @@ def check_paranthesis(expr_list):
         if is_open_bracket(char):
             stack.push(char)
         else:
-            if stack.empty() or not is_matched(stack.pop(), char):
+            if stack.is_empty() or not is_matched(stack.pop(), char):
                 return False
-    return stack.empty()
+    return stack.is_empty()
 
 
 print(check_paranthesis(expression_list))
